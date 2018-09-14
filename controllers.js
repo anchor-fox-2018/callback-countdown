@@ -1,7 +1,14 @@
-const { displayCountdown } = require("./views");
+const { displayCountdown } = require("./views.js");
 
-const timer = seconds => {
+const timer = function (seconds) {
   // Your code here...
+  let interval = setInterval(function () {
+    displayCountdown(seconds);
+    seconds--;
+    if (seconds < 0) {
+      clearInterval(interval);
+    }
+  }, 1000)
 };
 
 module.exports = {
