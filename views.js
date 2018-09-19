@@ -18,7 +18,7 @@ const displayCountdown = seconds => {
     minuteFormat = minute
   }
   
-  console.log(`${minuteFormat}:${secondFormat}`)
+  console.log(chalk.cyan(figlet.textSync(`${minuteFormat}:${secondFormat}`)))
 };
 
 module.exports = { displayCountdown };
